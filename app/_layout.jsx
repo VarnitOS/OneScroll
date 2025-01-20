@@ -40,9 +40,13 @@ const MainLayout = () => {
 
     const updateUserData = async(user) => {
         let res = await getUserData(user?.id);
-        if(res.success) setUserData(res.data);
+        if(res.success) {
+            setUserData(res.data);
+        } else {
+            return;
+        }
     }
-
+    
   return (
     <Stack
       screenOptions={{
