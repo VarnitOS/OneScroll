@@ -1,95 +1,129 @@
-<<<<<<< HEAD
-# Welcome to your Expo app 👋
-
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
-
-## Get started
-
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-=======
 # OneScroll
-### Where your feeds become besties 🤝
+
+> Where your feeds become besties 🤝
 
 OneScroll is a modern social media aggregator that unifies all your social feeds into one seamless scrolling experience. Stop app-hopping and start enjoying your content in one place.
 
-## Features
-- Unified feed combining Twitter, Instagram, Facebook, LinkedIn, and more
-- Smart chronological timeline across all platforms  
-- Single notification center for all your social interactions
-- Customizable feed filters and preferences
-- Dark/Light mode support
-- Cross-platform synchronization
+![OneScroll App](https://example.com/app-screenshot.png)
 
-## Why OneScroll?
-Tired of switching between apps? OneScroll brings all your social media feeds together in one beautiful, intuitive interface. Whether you're a social media enthusiast, content creator, or just looking to simplify your digital life, OneScroll helps you stay connected without the chaos.
+## Features
+
+- **Unified Feed**: Combine content from Twitter, Instagram, Facebook, LinkedIn, and more
+- **Smart Timeline**: Chronological content ordering across all platforms  
+- **Notification Center**: Single hub for all your social interactions
+- **Customizable Experience**: Filters and preferences for your ideal content mix
+- **Cross-Platform Support**: Available on iOS and Android
+- **Modern Design System**: Cohesive UI components and theming
+- **Dark/Light Mode**: Adaptive themes for any environment
+- **User Profiles**: Manage your identity and preferences
 
 ## Tech Stack
-- React Native / Expo
-- Supabase
- - Auth
- - Real-time Database
- - Edge Functions
- - Storage
-- OAuth2 Integration
-- TypeScript
-- Tailwind CSS
 
-## Quick Start
+- **Frontend**:
+  - React Native / Expo
+  - TypeScript
+  - React Navigation
+  - Reanimated for animations
+  - Custom design system with consistent theming
+
+- **Backend**:
+  - Supabase
+    - Authentication
+    - Real-time Database
+    - Edge Functions
+    - Storage
+  - RESTful API integration
+  - OAuth2 Integration
+
+- **Development Tools**:
+  - Jest for testing
+  - ESLint for code quality
+  - Git for version control
+  - CI/CD pipeline
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or newer)
+- npm or yarn
+- Expo CLI
+- iOS Simulator / Android Emulator (optional)
+
+### Installation
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/yourusername/onescroll.git
 
-# Install dependencies
+# Navigate to project directory
 cd onescroll
+
+# Install dependencies
 npm install
 
 # Set up environment variables
 cp .env.example .env
+# Edit .env with your Supabase credentials
 
-# Start development server
-npm run dev
->>>>>>> 797fd672a2c16598c6a7df795798bdb5b6c47865
+# Start the development server
+npm start
+```
+
+### Running on Devices
+
+```bash
+# For iOS
+npm run ios
+
+# For Android
+npm run android
+
+# For web
+npm run web
+```
+
+## Project Structure
+
+```
+onescroll/
+├── app/                 # App screens using file-based routing
+│   ├── (main)/          # Main app screens (authenticated)
+│   ├── _layout.jsx      # Root layout
+│   ├── login.jsx        # Login screen
+│   └── signUp.jsx       # Registration screen
+├── assets/              # Static assets (images, fonts, icons)
+├── components/          # Reusable UI components
+├── constants/           # App constants and theme
+├── context/             # React context providers
+├── helpers/             # Helper functions
+├── lib/                 # Core utilities
+├── services/            # API and backend services
+└── scripts/             # Dev and build scripts
+```
+
+## Design System
+
+OneScroll uses a custom design system with consistent components, typography, and spacing. This ensures a cohesive user experience across the application.
+
+- **Colors**: Defined palette with primary, secondary, and neutral tones
+- **Typography**: Consistent font families and sizing
+- **Components**: Reusable UI building blocks
+- **Spacing**: Standardized spacing and layout rules
+
+## Contributing
+
+We welcome contributions! Please check out our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Thanks to all the open-source libraries that made this project possible
+- Inspiration from existing social media platforms and aggregators
+
+## Contact
+
+For questions or feedback, please reach out to our team at [hello@onescroll.app](mailto:hello@onescroll.app)
